@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 import Image from 'next/image';
-import { SignIn, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import { Button } from '../ui/button';
 import NavItems from './NavItems';
 import MobileNav from './MobileNav';
