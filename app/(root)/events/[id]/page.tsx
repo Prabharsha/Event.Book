@@ -41,7 +41,7 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
               </div>
 
               <p className="p-medium-18 ml-2 mt-2 sm:mt-0">
-                by{""}
+                by{" "}
                 <span className="text-primary-500">{event.organizer.firstName} {event.organizer.lastName}</span>
               </p>
             </div>
@@ -54,11 +54,12 @@ const EventDetails = async ({ params: { id }, searchParams }: SearchParamProps) 
               <Image src="/assets/icons/calendar.svg" alt="calendar" width={32} height={32} />
               <div className="p-medium-16 lg:p-regular-20 flex flex-wrap items-center">
                 <p>
-                  {formatDateTime(event.startDateTime).dateOnly} - {""}
+                  {formatDateTime(event.startDateTime).dateOnly} - {" "}
                   {formatDateTime(event.startDateTime).timeOnly}
                 </p>
+                <span className="px-2 font-bold text-primary-500">to</span>
                 <p>
-                  {formatDateTime(event.endDateTime).dateOnly} -  {""}
+                  {formatDateTime(event.endDateTime).dateOnly} -  {" "}
                   {formatDateTime(event.endDateTime).timeOnly}
                 </p>
               </div>

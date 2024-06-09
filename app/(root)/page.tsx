@@ -28,8 +28,8 @@ export default async function Home({ searchParams }: SearchParamProps) {
             </h1>
             <p className='p-regular-20 md:p-regular-24'>
 
-              Book and learn helpful tips from our 2000+ mentors in world-class
-              companies with our global community.
+              Discover and book tickets to the best events around the world. 
+              Connect with a vibrant community and enjoy unforgettable experiences curated just for you.
             </p>
 
             <Button className='button w-full sm:w-fit'>
@@ -49,7 +49,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
       </section>
 
       <section id="events" className='wrapper my-8 flex flex-col gap-8 md:gap-12'>
-        <h2 className='h2-bold'>Trusted by <br /> Thousands of Evenets</h2>
+        <h2 className='h2-bold'>Trusted by <br /> Thousands of Events</h2>
 
         <div className='flex w-full flex-col gap-5 md:flex-row'>
           Search
