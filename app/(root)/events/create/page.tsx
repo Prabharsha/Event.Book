@@ -1,4 +1,5 @@
 "use client"
+
 import EventForum from '@/components/shared/EventForum'
 import { useUser } from '@clerk/nextjs';
 
@@ -8,8 +9,9 @@ import React from 'react'
 const CreateEvent = () => {
 
     const { user } = useUser();
-    const userId = user?.id || '';
+    const userId = user?.publicMetadata.userId as string;
 
+    console.log(userId);
 
     return (
         <>
