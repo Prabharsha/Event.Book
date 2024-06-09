@@ -1,10 +1,12 @@
+"use client"
 import { IEvent } from '@/lib/database/models/event.model'
 import { formatDateTime } from '@/lib/utils'
-import { auth } from '@clerk/nextjs'
+import { auth, useUser } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { DeleteConfirmation } from './DeleteConfirmation'
+
 
 type CardProps = {
   event: IEvent,
@@ -13,16 +15,15 @@ type CardProps = {
 }
 
 const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
-  const { sessionClaims } = auth();
-  const userId = sessionClaims?.userId as string;
-
+  const { user } = useUser();
+  const userId = user?.publicMetadata.userId as string;
   const isEventCreator = userId === event.organizer._id.toString();
 
   return (
     <div className="group relative flex min-h-[380px] w-full max-w-[400px] flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all hover:shadow-lg md:min-h-[438px]">
-      <Link 
+      <Link
         href={`/events/${event._id}`}
-        style={{backgroundImage: `url(${event.imageUrl})`}}
+        style={{ backgroundImage: `url(${event.imageUrl})` }}
         className="flex-center flex-grow bg-gray-50 bg-cover bg-center text-grey-500"
       />
       {/* IS EVENT CREATOR ... */}
@@ -39,8 +40,8 @@ const Card = ({ event, hasOrderLink, hidePrice }: CardProps) => {
 
       <div
         className="flex min-h-[230px] flex-col gap-3 p-5 md:gap-4"
-      > 
-       {!hidePrice && <div className="flex gap-2">
+      >
+        {!hidePrice && <div className="flex gap-2">
           <span className="p-semibold-14 w-auto rounded-full bg-green-100 px-4 py-1 text-green-60">
             {event.isFree ? 'FREE' : `${event.price} LKR`}
           </span>
