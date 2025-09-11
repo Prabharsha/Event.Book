@@ -59,8 +59,6 @@ npm run dev
 - Access the app at `http://localhost:3000` (or your configured port).
 - Register an account and start creating or booking events.
 
-*(Add screenshots or GIF demos here if available)*
-
 ---
 
 ## 🤝 Contributing
