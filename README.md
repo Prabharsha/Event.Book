@@ -87,5 +87,3 @@ Created by [Prabharsha](https://github.com/Prabharsha)
 For questions or support, please open an issue or reach out via GitHub.
 
 ---
-
-> *Feel free to customize this README to better fit your project’s unique functionality and tech stack!*
