@@ -13,8 +13,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 348 56% 41%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -80,6 +80,10 @@ body {
 .filter-grey {
   filter: brightness(0) saturate(100%) invert(47%) sepia(0%) saturate(217%)
     hue-rotate(32deg) brightness(98%) contrast(92%);
+}
+
+.filter-white {
+  filter: brightness(0) invert(1);
 }
 
 /* ========================================== TAILWIND STYLES */
@@ -228,6 +232,34 @@ body {
   .toggle-switch {
     @apply bg-gray-300 !important;
   }
+
+  .glass {
+    @apply bg-white/95 backdrop-blur-md;
+  }
+
+  .hero-section {
+    @apply relative overflow-hidden bg-cream-50;
+  }
+
+  .section-title {
+    @apply flex items-center gap-3;
+  }
+
+  .section-title-bar {
+    @apply w-1 h-8 rounded-full bg-primary-500;
+  }
+
+  .badge-free {
+    @apply rounded-full bg-teal-50 px-4 py-1 text-teal-500;
+  }
+
+  .badge-price {
+    @apply rounded-full bg-navy-50 px-4 py-1 text-navy-500;
+  }
+
+  .badge-category {
+    @apply rounded-full bg-grey-50 px-4 py-1 text-grey-500;
+  }
 }
 
 /* ========================================== CLERK STYLES */
@@ -250,7 +282,7 @@ body {
 .cl-formButtonPrimary:hover,
 .cl-formButtonPrimary:focus,
 .cl-formButtonPrimary:active {
-  background-color: #ffa10a
+  background-color: #a52e45
 }
 
 /* ========================================== REACT-DATEPICKER STYLES */
@@ -266,11 +298,11 @@ body {
 }
 
 .react-datepicker__day--selected {
-  background-color: #ffa10a !important;
+  background-color: #a52e45 !important;
   color: #ffffff !important;
   border-radius: 4px;
 }
 
 .react-datepicker__time-list-item--selected {
-  background-color: #ffa10a !important;
+  background-color: #a52e45 !important;
 }
