@@ -1,4 +1,5 @@
 import { IEvent } from '@/lib/database/models/event.model'
+import { CalendarX2 } from 'lucide-react'
 import React from 'react'
 import Card from './Card'
 import Pagination from './Pagination'
@@ -44,12 +45,15 @@ const Collection = ({
             <Pagination urlParamName={urlParamName} page={page} totalPages={totalPages} />
           )}
         </div>
-      ): (
-        <div className="flex-center wrapper min-h-[200px] w-full flex-col gap-3 rounded-[14px] bg-grey-50 py-28 text-center">
-          <h3 className="p-bold-20 md:h5-bold">{emptyTitle}</h3>
-          <p className="p-regular-14">{emptyStateSubtext}</p>
+      ) : (
+        <div className="flex-center wrapper min-h-[280px] w-full flex-col gap-4 rounded-2xl bg-cream-50 border border-cream-500/40 py-28 text-center">
+          <div className="flex-center w-16 h-16 rounded-full bg-primary-500/10">
+            <CalendarX2 className="w-8 h-8 text-primary-500" />
+          </div>
+          <h3 className="p-bold-20 md:h5-bold text-navy-500">{emptyTitle}</h3>
+          <p className="p-regular-14 text-grey-500 max-w-xs">{emptyStateSubtext}</p>
         </div>
-      )} 
+      )}
     </>
   )
 }
